@@ -18,7 +18,7 @@ def parse_bppm_file_from_centroid(bppm_map):
             right_pos, prob = p.split(":")
             result[int(right_pos)] += float(prob)
             sum_prob += float(prob)
-            result[attr[0]] += sum_prob
+        result[attr[0]] += sum_prob
     return result
 
 def parse_args():
