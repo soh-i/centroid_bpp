@@ -1,7 +1,7 @@
 from collections import defaultdict
 import argparse
 
-def __laod_bpp_file(bppm_file):
+def __load_bpp_file(bppm_file):
     bppm_map = dict()
     with open(bppm_file, "r") as f:
         for line in f:
@@ -29,7 +29,7 @@ def parse_args():
 
 def run():
     args = parse_args()
-    result = parse_bppm_file_from_centroid(__laod_bpp_file(args.file))
+    result = parse_bppm_file_from_centroid(__load_bpp_file(args.file))
     for pos, bpp in result.items():
         print "%s,%s" % (pos, bpp)
 
